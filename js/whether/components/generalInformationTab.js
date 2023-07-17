@@ -15,7 +15,7 @@ function showGeneralInformationTab(data) {
         weekday: "long",
       });
       if (day === selectedDay.innerHTML) {
-        selectedTimeWhetherIcon.src = `./node_modules/open-weather-icons/src/svg/${data.list[i].weather[0].icon}.svg`;
+        selectedTimeWhetherIcon.src = `../../assets/svg/${data.list[i].weather[0].icon}.svg`;
         temperatureArea.innerHTML = `${Math.round(
           data.list[i].main.temp
         )} <span>°C</span>`;
@@ -52,7 +52,7 @@ function updateGeneralInformationTab(data) {
     weatherConditionArea.innerHTML = i18next.t(
       selectedTimeInformation.weather[0].description
     );
-    selectedTimeWhetherIcon.src = `./node_modules/open-weather-icons/src/svg/${selectedTimeInformation.weather[0].icon}.svg`;
+    selectedTimeWhetherIcon.src = `../../assets/svg/${selectedTimeInformation.weather[0].icon}.svg`;
   }
 }
 

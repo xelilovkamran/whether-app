@@ -58,9 +58,7 @@ function showDaysTab(data) {
           }
         }
 
-        dayWeatherIcon[
-          dayNumber++
-        ].src = `./node_modules/open-weather-icons/src/svg/${icon}.svg`;
+        dayWeatherIcon[dayNumber++].src = `../../assets/svg/${icon}.svg`;
 
         icons.length = 0;
       }
@@ -87,9 +85,7 @@ function showDaysTab(data) {
         }
       }
 
-      dayWeatherIcon[
-        dayNumber
-      ].src = `./node_modules/open-weather-icons/src/svg/${icon}.svg`;
+      dayWeatherIcon[dayNumber].src = `../../assets/svg/${icon}.svg`;
     }
 
     // * SHOW WHETHER MAX AND MIN
