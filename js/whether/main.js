@@ -53,7 +53,11 @@ async function fetchData(url) {
 
 function createRegionSelection() {
   for (let i = 0; i < regions.length; i++) {
-    if (regions[i] === "abşeron" || regions[i] === "kürdəmir") {
+    if (
+      regions[i] === "abşeron" ||
+      regions[i] === "kürdəmir" ||
+      regions[i] === "şabran"
+    ) {
       regions.splice(i, 1);
       i--;
     }
