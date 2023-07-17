@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/weather.css" />
+    <script
+      src="https://kit.fontawesome.com/55a3fd6aba.js"
+      crossorigin="anonymous"
+    ></script>
+    <title>Document</title>
+  </head>
+  <body>
+    <header id="header">
+      <div class="container">
+        <div class="return-to-back">
+          <a href="./index.html"
+            ><i class="fa-solid fa-arrow-left fa-lg"></i> Geri Qayıt</a
+          >
+        </div>
+        <div class="region-options">
+          <select id="regionNames"></select>
+        </div>
+      </div>
+    </header>
+
+    <div class="loading">
+      <img src="./assets/svg/loading.svg" />
+    </div>
+
+    <main id="main">
+      <div class="general-information">
+        <div class="left-side">
+          <div class="img-container">
+            <img src="" />
+          </div>
+          <h3></h3>
+        </div>
+        <div class="right-side">
+          <h1 class="region-name"></h1>
+          <p class="time"></p>
+          <p class="weather"></p>
+        </div>
+      </div>
+      <nav id="navbar">
+        <ul>
+          <li class="temp selected">Temperatur</li>
+          <li class="fillsTemp">Hissedilən</li>
+          <li class="humadity">Rütubət</li>
+          <li class="wind">Külək</li>
+        </ul>
+      </nav>
+
+      <section id="chart"></section>
+
+      <section id="five-day">
+        <div class="first active">
+          <p class="name-of-day"></p>
+          <img src="" />
+          <p class="min-max"></p>
+        </div>
+        <div class="second">
+          <p class="name-of-day"></p>
+          <img src="" />
+          <p class="min-max"></p>
+        </div>
+        <div class="third">
+          <p class="name-of-day"></p>
+          <img src="" />
+          <p class="min-max"></p>
+        </div>
+        <div class="fourth">
+          <p class="name-of-day"></p>
+          <img src="" />
+          <p class="min-max"></p>
+        </div>
+        <div class="fifth">
+          <p class="name-of-day"></p>
+          <img src="" />
+          <p class="min-max"></p>
+        </div>
+      </section>
+    </main>
+
+    <script src="./node_modules/i18next/dist/umd/i18next.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+    <script src="./js/whether/main.js" type="module"></script>
+  </body>
+</html>

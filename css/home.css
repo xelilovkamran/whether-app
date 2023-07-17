@@ -1,0 +1,156 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #111827;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  scroll-behavior: smooth;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 0 20px;
+}
+
+.container h1 {
+  color: #fff;
+  margin-top: 40px;
+  text-align: center;
+}
+
+.options {
+  background-color: #050917;
+  margin-top: 30px;
+  color: #fff;
+  display: flex;
+  gap: 10px;
+  padding: 10px;
+  border-radius: 117px;
+  position: sticky;
+  top: 20px;
+}
+
+.options button {
+  padding: 10px;
+  cursor: pointer;
+  border: none;
+  color: #fff;
+  background: transparent;
+  transition: all 0.5s ease;
+  font-weight: 600;
+}
+
+.options .list-btn {
+  border-radius: 61px;
+}
+
+.options .map-btn {
+  border-radius: 30px;
+}
+
+.options .active {
+  background-color: #4036df;
+}
+
+.input-wraper {
+  margin-top: 40px;
+}
+
+#search {
+  padding: 15px;
+  width: 700px;
+  background: transparent;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  font-weight: 600;
+  color: #fff;
+}
+
+#search::placeholder {
+  color: #fff;
+  opacity: 0.5;
+}
+
+.container .result {
+  margin-top: 40px;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.region {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: #fff;
+  font-weight: 600;
+  width: 250px;
+  padding: 0 10px;
+  border: 1px solid #fff;
+  border-radius: 110px;
+  margin-bottom: 20px;
+  transition: all 0.5s ease;
+}
+
+.region .index {
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  border-radius: 50%;
+  background-color: #4036df;
+  transition: all 0.5s ease;
+}
+
+.region .regionName {
+  flex-grow: 1;
+  text-align: center;
+}
+
+.region .regionName a {
+  display: block;
+  width: 100%;
+  padding: 20px 0;
+}
+
+.region:hover {
+  background-color: #4036df;
+}
+
+.region:hover .index {
+  background-color: #fff;
+  color: #4036df;
+}
+
+@media screen and (max-width: 750px) {
+  #search {
+    width: 400px;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  #search {
+    width: 300px;
+  }
+}

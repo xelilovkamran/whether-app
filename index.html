@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/home.css" />
+    <link rel="stylesheet" href="./css/map.css" />
+    <title>Whether App</title>
+  </head>
+  <body>
+    <div class="container">
+      <h1 class="heading">Azərbaycan - Bölgələrə Görə Hava Məlumatı</h1>
+      <div class="options">
+        <button class="list-btn active">Bölgə Siyahısı</button>
+        <button class="map-btn">Xəritə</button>
+      </div>
+
+      <div class="input-wraper">
+        <input type="search" id="search" placeholder="Bölgə axtar" />
+      </div>
+
+      <div class="result"></div>
+    </div>
+    <script src="./js/home/map.js" type="module"></script>
+    <script src="./js/home/home.js" type="module"></script>
+  </body>
+</html>
