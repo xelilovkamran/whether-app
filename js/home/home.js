@@ -31,7 +31,7 @@ function loadRegions(array) {
     div.innerHTML = `
     <div class="region">
     <div class="index">${i + 1}</div>
-    <div class="regionName"><a href="../whether.html" target="_self">${
+    <div class="regionName"><a href="../weather.html" target="_self">${
       array[i].charAt(0).toUpperCase() + array[i].slice(1)
     }</a></div>
     </div>

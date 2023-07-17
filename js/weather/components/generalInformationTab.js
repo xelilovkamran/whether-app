@@ -1,7 +1,7 @@
 import { regionName } from "../main.js";
 
 const regionNameArea = document.querySelector(".right-side .region-name");
-const selectedTimeWhetherIcon = document.querySelector(".img-container img");
+const selectedTimeWeatherIcon = document.querySelector(".img-container img");
 const temperatureArea = document.querySelector(".left-side h3");
 const selectedTimeArea = document.querySelector(".right-side .time");
 const weatherConditionArea = document.querySelector(".right-side .weather");
@@ -15,7 +15,7 @@ function showGeneralInformationTab(data) {
         weekday: "long",
       });
       if (day === selectedDay.innerHTML) {
-        selectedTimeWhetherIcon.src = `../../assets/svg/${data.list[i].weather[0].icon}.svg`;
+        selectedTimeWeatherIcon.src = `../../assets/svg/${data.list[i].weather[0].icon}.svg`;
         temperatureArea.innerHTML = `${Math.round(
           data.list[i].main.temp
         )} <span>°C</span>`;
@@ -31,28 +31,30 @@ function showGeneralInformationTab(data) {
 }
 
 function updateGeneralInformationTab(data) {
-  const hour = document.querySelector(".apexcharts-tooltip-title").innerHTML;
-  const dayName = document.querySelector(".active .name-of-day").innerHTML;
-  const selectedTimeInformation = data.list.find((element) => {
-    const date = new Date(element.dt_txt);
-    const day = date.toLocaleString("az", {
-      weekday: "long",
+  if (document.querySelector(".apexcharts-tooltip-title")) {
+    const hour = document.querySelector(".apexcharts-tooltip-title").innerHTML;
+    const dayName = document.querySelector(".active .name-of-day").innerHTML;
+    const selectedTimeInformation = data.list.find((element) => {
+      const date = new Date(element.dt_txt);
+      const day = date.toLocaleString("az", {
+        weekday: "long",
+      });
+      const selectedTime = `${date.getHours()}:00`;
+      if (day === dayName && selectedTime === hour) {
+        return element;
+      }
     });
-    const selectedTime = `${date.getHours()}:00`;
-    if (day === dayName && selectedTime === hour) {
-      return element;
-    }
-  });
 
-  if (hour && selectedTimeInformation) {
-    temperatureArea.innerHTML = `${Math.round(
-      selectedTimeInformation.main.temp
-    )} <span>°C</sapn>`;
-    selectedTimeArea.innerHTML = `${dayName} - ${hour}`;
-    weatherConditionArea.innerHTML = i18next.t(
-      selectedTimeInformation.weather[0].description
-    );
-    selectedTimeWhetherIcon.src = `../../assets/svg/${selectedTimeInformation.weather[0].icon}.svg`;
+    if (hour && selectedTimeInformation) {
+      temperatureArea.innerHTML = `${Math.round(
+        selectedTimeInformation.main.temp
+      )} <span>°C</sapn>`;
+      selectedTimeArea.innerHTML = `${dayName} - ${hour}`;
+      weatherConditionArea.innerHTML = i18next.t(
+        selectedTimeInformation.weather[0].description
+      );
+      selectedTimeWeatherIcon.src = `../../assets/svg/${selectedTimeInformation.weather[0].icon}.svg`;
+    }
   }
 }
 

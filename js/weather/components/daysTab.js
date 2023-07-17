@@ -31,7 +31,7 @@ function showDaysTab(data) {
       }
     }
 
-    // * SHOW WHETHER ICON OF DAY
+    // * SHOW WEATHER ICON OF DAY
     dayNumber = 0;
     const icons = [];
     if (data.list[0].dt_txt.includes("21:00:00")) {
@@ -88,7 +88,7 @@ function showDaysTab(data) {
       dayWeatherIcon[dayNumber].src = `../../assets/svg/${icon}.svg`;
     }
 
-    // * SHOW WHETHER MAX AND MIN
+    // * SHOW WEATHER MAX AND MIN
     dayNumber = 0;
     const minTemps = [];
     const maxTemps = [];
